@@ -1,15 +1,15 @@
-#version 6:
-
-#removed music from Skyrim OST because of copyright. 
-
+#version 7:
 
 
 from direct.showbase.ShowBase import ShowBase
 base = ShowBase()
-
 from direct.gui.DirectGui import *
 from panda3d.core import TextNode
 import sys
+from panda3d.core import PointLight
+from panda3d.core import LVector3
+from panda3d.core import AmbientLight
+
 
 
 #soundtrack = base.loader.loadSfx("sound\secunda.mp3")
@@ -32,7 +32,22 @@ class World(object):
         camera.setPos(0, 0, 45)  # Set the camera position (X, Y, Z)
         camera.setHpr(0, -90, 0)  # Set the camera orientation
         #(heading, pitch, roll) in degrees
-        
+
+     
+        #sets up PointLighting to simulate Light coming from Magnus
+        plight = PointLight('plight')
+        plight.setColor((1, 1, 1, 1))       
+        plnp = render.attachNewNode(plight) 
+        plnp.setPos(20, 0, 0)      #position just in front of Magnus
+        render.setLight(plnp)      #because if pos set behind Magnus than the side of Magnus within the star sphere will not be illuminated
+
+        #sets up AmbientLighting so that the dark side of plane(t)s/moons aren't /too/ dark.
+        alight = AmbientLight('alight')
+        alight.setColor((0.2, 0.2, 0.2, 1))
+        alnp = render.attachNewNode(alight)
+        render.setLight(alnp)
+
+
 
         # Here again is where we put our global variables. Added this time are
         # variables to control the relative speeds of spinning and orbits in the
@@ -64,6 +79,7 @@ class World(object):
         self.orbit_root_julianos = render.attachNewNode('orbit_root_julianos')
         self.orbit_root_stendarr = render.attachNewNode('orbit_root_stendarr')
         self.orbit_root_arkay = render.attachNewNode('orbit_root_arkay')
+        self.orbit_root_magnus = render.attachNewNode('orbit_root_magnus')
 
 
         # The moon orbits Earth, not the sun
@@ -91,6 +107,14 @@ class World(object):
         self.sun.setTexture(self.sun_tex, 1)
         self.sun.reparentTo(render)
         self.sun.setScale(2 * self.sizescale)
+
+        # Load Magnus
+        self.magnus = loader.loadModel("models/planet_sphere")
+        self.magnus_tex = loader.loadTexture("models/magnus.jpg")
+        self.magnus.setTexture(self.magnus_tex, 1)
+        self.magnus.reparentTo(self.orbit_root_magnus)
+        self.magnus.setPos(12.5 * self.orbitscale, 0, 0)
+        self.magnus.setScale(2.5 * self.sizescale)
 
         # Load Kynareth
         self.mercury = loader.loadModel("models/planet_sphere")
@@ -212,6 +236,11 @@ class World(object):
         self.day_period_arkay = self.arkay.hprInterval(
             (59 * self.dayscale), (360, 0, 0))
 
+        self.orbit_period_magnus = self.orbit_root_magnus.hprInterval(
+            (0 * self.yearscale), (360, 0, 0))
+        self.day_period_magnus = self.magnus.hprInterval(   #values set to zero so Magnus doesn't move
+            (0 * self.dayscale), (360, 0, 0))
+
         self.day_period_sun.loop()
         self.orbit_period_mercury.loop()
         self.day_period_mercury.loop()
@@ -229,6 +258,8 @@ class World(object):
         self.day_period_stendarr.loop()
         self.orbit_period_arkay.loop()
         self.day_period_arkay.loop()
+        self.orbit_period_magnus.loop()
+        self.day_period_magnus.loop()
     # end RotatePlanets()
 # end class world
 
