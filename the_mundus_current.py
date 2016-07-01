@@ -13,9 +13,9 @@ from panda3d.core import AmbientLight
 
 
 
-#soundtrack = base.loader.loadSfx("sound\secunda.mp3")
-#soundtrack.setLoopCount(9999999999999999) # loop (virually) forever
-#soundtrack.play()
+soundtrack = base.loader.loadSfx("sound\secunda.mp3")
+soundtrack.setLoopCount(9999999999999999) # loop (virually) forever
+soundtrack.play()
 
 
 
@@ -75,6 +75,7 @@ class World(object):
         self.orbit_root_venus = render.attachNewNode('orbit_root_venus')
         self.orbit_root_mars = render.attachNewNode('orbit_root_mars')
         self.orbit_root_earth = render.attachNewNode('orbit_root_earth')
+        
 
         #added planet's dummy nodes
 
@@ -83,6 +84,7 @@ class World(object):
         self.orbit_root_arkay = render.attachNewNode('orbit_root_arkay')
         self.orbit_root_magnus = render.attachNewNode('orbit_root_magnus')
 
+        self.orbit_root_julianos.set_hpr(0, 0, 30)   #testing diaganol orbiting. Kinda works...
 
         # The moon orbits Earth, not the sun
         self.orbit_root_moon = (
