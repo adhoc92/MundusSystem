@@ -19,4 +19,4 @@ The Dwemer Orrery from TES: Oblivion.
 Link = http://www.uesp.net/w/images/thumb/3/30/OB-quest-Repairing_the_Orrery.jpg/799px-OB-quest-Repairing_the_Orrery.jpg
 _____________________________________________________________________________________________________________
 
-And a big shoutout to the intelligent, creative, crazy people at /r/teslore on Reddit. I love you guys.
+And a big shoutout to the intelligent, creative, crazy people at /r/teslore. I love you guys.
