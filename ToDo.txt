@@ -1,0 +1,9 @@
+make sure all planets spin
+
+adjust orbits so they are diagonal
+
+add moons mara and dibella to Zenithar
+
+add Magnus (sun) somehow
+
+is that it???
