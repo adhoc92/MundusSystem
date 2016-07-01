@@ -15,7 +15,7 @@ Link = http://okiir.deviantart.com/art/The-Elder-Scrolls-Cosmology-432011248
 A diagram of Mundus based on the Orrery from Redguard (Can't find the original artist :/) 
 Link =  http://vignette2.wikia.nocookie.net/elderscrolls/images/3/30/Dwemer_orrery.jpeg/revision/latest?cb=20121124012633
 
-I modified the following map of NIrn to wrap around my 3D version.
+I modified the following map of Nirn to wrap around my 3D version.
 Link = https://i.imgur.com/RJEpNdC.jpg
 
 The Dwemer Orrery from TES: Oblivion.
