@@ -1,6 +1,7 @@
-This is a 3d simulation of the Mundus system of Plane(t)s and moons from the game series the Elder Scrolls, written in
-Python with Panda3D. 
 
+This is a 3d simulation of the Mundus plane(t)ary system from the game series the Elder Scrolls, written in
+Python with Panda3D. 
+____________________________________________________________________________________________________________________________
 
 References for this project:
 
@@ -12,8 +13,6 @@ Link: http://vignette2.wikia.nocookie.net/elderscrolls/images/3/30/Dwemer_orrery
 
 The Dwemer Orrery from TES: Oblivion.
 Link: http://www.uesp.net/w/images/thumb/3/30/OB-quest-Repairing_the_Orrery.jpg/799px-OB-quest-Repairing_the_Orrery.jpg
+____________________________________________________________________________________________________________________________
 
-
-
-And a big shoutout to the intelligent, creative, crazy people at /r/teslore on Reddit. You guys are awesome! 
-
+And a big shoutout to the intelligent, creative, crazy people at /r/teslore on Reddit. I love you guys.
