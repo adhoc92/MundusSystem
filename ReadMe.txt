@@ -1,6 +1,6 @@
 
-This is a 3d simulation of the Mundus plane(t)ary system from the game series the Elder Scrolls, written in
-Python with Panda3D. 
+This is a 3D, simulation of the Mundus plane(t)ary system from the game series 'The Elder Scrolls', written in
+Python with Panda3D. It is an interactive orerry, where the user can navigate throughout the system and look at Mundus' planetary objects from any angle they wish. My goal is to make as accurate as possible.
 ____________________________________________________________________________________________________________
 
 References for this project:
