@@ -3,7 +3,7 @@ This is a 3D simulation of the Mundus plane(t)ary system from the game series 'T
 Python with Panda3D. It is an interactive orerry, where the user can navigate throughout the system and look 
 at its planetary objects from any angle they wish. My goal is to make as accurate as possible.
 
-If you'd like to contribute this project, hit me up on Reddit (username: adhoc92). You can message me here
+If you want to contribute to this project, hit me up on Reddit (username: adhoc92). You can message me here
 on GitHub if you like, but I'll probably see it sooner on Reddit. 
 ____________________________________________________________________________________________________________
 
