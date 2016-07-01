@@ -1,6 +1,7 @@
-#version 6:
+#version 5: added:
 
-#removed music from Skyrim OST because of copyright. 
+# added Arkay, above the rest of the system
+# changed scale of background starfield image
 
 
 
@@ -12,9 +13,9 @@ from panda3d.core import TextNode
 import sys
 
 
-#soundtrack = base.loader.loadSfx("sound\secunda.mp3")
-#soundtrack.setLoopCount(9999999999999999) # loop (virually) forever
-#soundtrack.play()
+soundtrack = base.loader.loadSfx("sound\secunda.mp3")
+soundtrack.setLoopCount(9999999999999999) # loop (virually) forever
+soundtrack.play()
 
 
 
