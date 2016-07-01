@@ -6,4 +6,8 @@ add moons mara and dibella to Zenithar
 
 add toggalable orbital rings
 
+well, I added lighting, so now I need to add an option to turn it off
+
+make reddit username text smaller
+
 is that it???

@@ -1,5 +1,6 @@
 #version 7:
 
+#added reddit username to OnScreenText
 
 from direct.showbase.ShowBase import ShowBase
 base = ShowBase()
@@ -24,7 +25,8 @@ class World(object):
 
         #initialization
         self.title = OnscreenText(  # display title
-            text="Mundus",
+            text="""Mundus
+                /u/adhoc92""",
             parent=base.a2dBottomRight, align=TextNode.A_right,
             style=1, fg=(1, 1, 1, 1), pos=(-0.1, 0.1), scale=.07)
 
